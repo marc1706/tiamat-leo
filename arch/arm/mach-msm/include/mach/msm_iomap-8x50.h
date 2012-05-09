@@ -48,7 +48,7 @@
 #define MSM_TMR_SIZE          SZ_4K
 
 #define MSM_GPT_PHYS          MSM_CSR_PHYS
-#define MSM_GPT_BASE          MSM_CSR_BASE
+#define MSM_GPT_BASE          MSM_TMR_BASE
 #define MSM_GPT_SIZE          SZ_4K
 
 #define MSM_DGT_BASE          (MSM_TMR_BASE + 0x10)
@@ -76,10 +76,11 @@
 #define MSM_CLK_CTL_BASE      IOMEM(0xF8005000)
 #define MSM_CLK_CTL_PHYS      0xA8600000
 #define MSM_CLK_CTL_SIZE      SZ_4K
-
+/*
 #define MSM_CLK_CTL_SH2_BASE  IOMEM(0xF8006000)
 #define MSM_CLK_CTL_SH2_PHYS  0xABA01000
 #define MSM_CLK_CTL_SH2_SIZE  SZ_4K
+*/
 
 #define MSM_TS_BASE           IOMEM(0xF9006000)
 #define MSM_TS_PHYS           0xAA300000
@@ -165,11 +166,6 @@
 #define MSM_SCPLL_PHYS        0xA8800000
 #define MSM_SCPLL_SIZE        SZ_4K
 
-#if defined(CONFIG_CACHE_L2X0)
-#define MSM_L2CC_BASE         IOMEM(0xF8008000)
-#define MSM_L2CC_PHYS         0xC0400000
-#define MSM_L2CC_SIZE         SZ_4K
-#endif
 
 #define MSM_GPU_REG_PHYS      0xA0000000
 #define MSM_GPU_REG_SIZE      0x00020000
